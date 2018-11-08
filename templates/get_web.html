@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <!--JS-->
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <title>Get Web</title>
+</head>
+<body>
+<div class="container">
+    <form method='post' actioin={{ url_for('temp_change_beauty') }}>
+        <div class="row">
+            <div class="form-group col-sm">
+                <label for="celsius_text">攝氏溫度</label>
+                <input type='text' class="form-control" value='0' name='celsius'>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+        <div class="row">
+            <div class="form-group col-5">
+                <label for="fah_text">華氏溫度</label>
+                <input type='text' class="form-control" value='0' name='fah'>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <button type='submit' class="btn btn-primary">送出</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
